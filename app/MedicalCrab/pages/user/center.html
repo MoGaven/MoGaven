@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/handlebars-v3.0.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
+		<script src="../../js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/user/center.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<script type="text/x-handlebars-template" id="userinfo">
+			<a id="userlogo" class="mui-navigate-right">
+				<img class="mui-pull-left user-logo" src="{{request.ServerUrl}}{{UserImage}}" id="userimage">
+				<div class="mui-media-body">
+					<h4>{{UserName}}</h4>
+					<p class='mui-ellipsis-2'>{{SignDiscription}}</p>
+				</div>
+			</a>
+		</script>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">用户中心 </h1>
+		</header>-->
+		<div class="mui-content">
+			<ul class="mui-table-view" style="margin-top: 0;">
+				<li class="mui-table-view-cell mui-media">
+					<content data-api="user/userinfo" data-template="userinfo">
+						<a href="#picture" class="mui-navigate-right">
+							<img class="mui-pull-left user-logo" src="../../images/user-photo.png">
+							<div class="mui-media-body">
+								<h4>名称</h4>
+								<p class='mui-ellipsis-2'>个性签名</p>
+							</div>
+						</a>
+					</content>
+				</li>
+			</ul>
+			<p></p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 我的动态
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 我的同行
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 我的收藏
+					</a>
+				</li>
+			</ul>
+			<p></p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 附近医院
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 附近聚会
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 附近同行
+					</a>
+				</li>
+			</ul>
+
+			<p></p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right"  id="btn-edituser">
+						<icon class=" mui-icon mui-icon-home"></icon> 账户资料
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<icon class=" mui-icon mui-icon-home"></icon> 设置
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

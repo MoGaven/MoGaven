@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+		<script src="../../js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/user/userinfo.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			.mui-input-row label {
+				width: 25%;
+				padding-right: 0;
+			}
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 75%;
+				padding-right: 5px;
+			}
+			.mui-input-group .mui-input-row:after {
+				left: 0;
+			}
+			.mui-input-group .mui-textarea-row {
+				position: relative;
+			}
+			.mui-input-group .mui-textarea-row:after {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 1px;
+				content: '';
+				background-color: #c8c7cc;
+				-webkit-transform: scaleY(.5);
+				transform: scaleY(.5);
+			}
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				right: 5px;
+				position: absolute;
+				top: 50%;
+				display: inline-block;
+				font-family: Muiicons;
+				font-size: inherit;
+				line-height: 1;
+				color: #bbb;
+				text-decoration: none;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				-webkit-font-smoothing: antialiased;
+			}
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				content: '\e583';
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">编辑资料</h1>
+			<!--<a class="mui-btn mui-btn-primary mui-btn-link mui-pull-right cmd-ok">完成</a>-->
+		</header>
+		<div class="mui-content" >
+			<p></p>
+			<form class="mui-input-group" id="userinfo" data-api="user/edit" data-params='{"UserName":app.Request.User.UserName}' data-success-event="OnSuccess">
+				<div class="mui-input-row">
+					<label>昵称 </label>
+					<input type="text" placeholder="请输入昵称">
+				</div>
+				<div class="mui-input-row">
+					<label>性别</label>
+					<input type="text" placeholder="请输入性别"><span class="mui-navigate-right"></span>
+				</div>
+
+				<div class="mui-input-row">
+					<label>生日</label>
+					<input type="date"  placeholder="请输入你的生日"><span class="mui-navigate-right"></span>
+				</div>
+
+				<div class="mui-input-row">
+					<label>邮箱</label>
+					<input type="email" name="Email"  placeholder="请输入你的邮箱">
+				</div>
+
+				<div class="mui-input-row">
+					<label>电话</label>
+					<input type="tel" name="Phone"  placeholder="请输入你的电话">
+				</div>
+                <div class="mui-input-row">
+					<label>住址</label>
+					<input type="tel" name="Address" placeholder="请输入你的地址"><span class="mui-navigate-right"></span>
+				</div>
+				<div class="mui-textarea-row">
+					<textarea name="SignDiscription" rows="3" cols="" placeholder="个性签名"></textarea>
+				</div>
+				<div class="mui-button-row">
+					<submit class="mui-btn mui-btn-primary"  target-id="userinfo">保存修改</submit>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

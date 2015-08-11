@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+		<script src="../../js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			
+			<form class="ui-login-form" id="register" data-api="user/register">
+				<input name='UserName' type="text" class="mui-input-clear mui-input" placeholder="账号">
+				<input name='Password' type="password" class="mui-input-clear mui-input" placeholder="密码">
+				<input name='Email' type="text" class="mui-input-clear mui-input" placeholder="邮箱">
+			</form>
+			<div class="mui-content-padded">
+				<submit target-id='register' class="mui-btn mui-btn-block mui-btn-primary">注册新用户</submit>
+			</div>
+		</div>
+	</body>
+
+</html>
